@@ -18,7 +18,11 @@
                 }
 
                 var eventHandler = function(e) {
-
+                    //check the element is an anchor
+                    if(e.target.tagName.toLowerCase() === 'a'){
+                      return
+                    }
+                    
                     //check if our element already hiden
                     if(angular.element(elem).hasClass("ng-hide")){
                         return;
